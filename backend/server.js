@@ -28,6 +28,7 @@ app.use("/", express.static(path.join(__dirname, "public")));
 
 // ROUTES
 app.use("/", require("./routes/root.js"));
+app.use("/users", require("./routes/userRoutes.js"));
 
 // NOT FOUND
 app.all("*", (req, res) => {
